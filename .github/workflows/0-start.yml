@@ -43,6 +43,7 @@ jobs:
       # Make a branch, file, commit, and pull request for the learner
       - name: Prepare a pull request, branch, and file
         run: |
+          cat .github/script/STEP
           echo "Make sure we are on step 0"
           if [ "$(cat .github/script/STEP)" != 0 ]
           then
