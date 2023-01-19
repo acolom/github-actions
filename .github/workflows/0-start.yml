@@ -43,13 +43,6 @@ jobs:
       # Make a branch, file, commit, and pull request for the learner
       - name: Prepare a pull request, branch, and file
         run: |
-          echo "Make sure we are on step 0"
-          if [ "$(cat .github/script/STEP)" != 0 ]
-          then
-            echo "Current step is not 0"
-            exit 0
-          fi
-
           echo "Make a branch"
           BRANCH=welcome-workflow
           git checkout -b $BRANCH
